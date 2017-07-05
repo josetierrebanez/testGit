@@ -1,0 +1,111 @@
+#configuracion con usuario github
+
+	git config --global user.name "nombre"
+	git config --global user.email elmail@mail.com
+
+
+
+#crear repositorio local
+
+	git init
+
+
+
+
+
+#clonar repositorios
+
+	git clone /path/to/repo
+	git clone username@host:/path/to/repo
+
+
+
+
+
+#añadir archivo al stage
+
+	git add (filename or *)
+
+
+
+
+
+#commit proyecto
+	
+	git commit -m "Commit message"
+	git commit -a //commit archivos en el stage y archivos modificados
+
+
+
+
+
+#push
+
+	git push origin master
+
+
+
+
+
+# git status
+
+
+
+
+
+#repo remoto
+	
+	git remote add origin <server>
+	git remote -v // listar repos remotos configurados
+
+
+
+
+
+#Branches
+
+	git checkout -b <branchname> //crea un nuevo branch y te cambia a ese
+	git checkout <branchname> //te cambia de branch
+	git branch //lista los branches
+	git branch -d <branchname> //borrar branch especificado
+	git push origin <branchname>
+	git push --all origin //enviar todos los branches al repo remoto
+	git push origin :<branchname> //borrar branch en repo remoto
+
+
+
+
+
+#update from remote repo
+
+	git pull // fetch and merge cambios del servidor remoto a local
+	git merge <branchename> // merge un branche diferente en el branche local activo
+	git diff //ver merge conflictos 
+	git diff --base <filename> //ver merge conflictos contra base file
+	git diff <sourcebranch> <targetbranch> //preview cambios antes del merge
+	git add <filename> //despues de resolver los conflictos, se marca elk archivo cambiado
+
+
+
+
+
+#tags
+
+	git tag 1.0.0 <commitID> // usar tagging para cambios significantes en un release
+	git log
+	git push --tags origin //push all tags to remote repository
+
+
+
+
+
+#retroceder cambios en LOCAL
+
+	git checkout -- <filename> //retroceder cambios en el arbol con el ultimo cambio guardado en el header, cambios agregados en en indice y archivos nuevos se mantendran
+	git fetch origin 
+	git reset --hard origin/master //para deshacer todos los commits y cambios en el repo local, fetch al ultimo historial del servidor y apuntar el brach master local a este
+
+
+
+
+#git grep "lala" // buscar "lala" en el directorio de trabajo
