@@ -15,16 +15,3 @@ vi -r <filename> //editar archivo desde ultima linea editada
 *      o //abre una nueva linea al despues de la linea del cursor
 *      O //abre una nueva linea sobre la linea del cursor
 
-*      /"string" //busca texto
-*      ?"string" //busca hacia atras
-
-*      :.= //retorna el numero de linea actual
-*      := // retorna el numero total de lineas
-*      ^g // retorna el numero de linea actual, el numero total de lineas
-
-*      :r <filename> //lee el archivo he inserta despues de la linea actual
-*      :w //ecribir cambios
-*      :w <newfile> //escribe los cambios generando una copia(save as)
-*
-*      :12,35w <newfile> // escribe un nuevo archivo con el contenido del actual tomando el contenido entre las lineas 12 - 35
-*      :w! <prevfile> // escribe el contenido actual sobre un archivo ya existente 
