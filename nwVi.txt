@@ -1,0 +1,30 @@
+vi <filename> //editar archivo desde la primera linea del doc
+vi -r <filename> //editar archivo desde ultima linea editada
+{esc} :x{enter} // salir de vi guardando cambios
+{esc} :wq{enter} //salir de vi guardando los cambios
+{esc} :q{enter} // salir de vi, si hay cambios sin guardar no sale
+{esc} :q!{enter} //salir de vi aunque los cambios no esten guardados
+{esc} :<number> //salta el cursor a la linea especifiada
+{esc} :$<enter> //salta a la ultima linea
+
+*      u //retroceder cambios
+*      i //insertar cambios en la posicion del cursor
+*      I //insertar cambios al inicio de la linea del cursor
+*      a //insertar cambios despues de la posicion del cursor
+*      A //agregar texto al final de la linea actual
+*      o //abre una nueva linea al despues de la linea del cursor
+*      O //abre una nueva linea sobre la linea del cursor
+
+*      /"string" //busca texto
+*      ?"string" //busca hacia atras
+
+*      :.= //retorna el numero de linea actual
+*      := // retorna el numero total de lineas
+*      ^g // retorna el numero de linea actual, el numero total de lineas
+
+*      :r <filename> //lee el archivo he inserta despues de la linea actual
+*      :w //ecribir cambios
+*      :w <newfile> //escribe los cambios generando una copia(save as)
+*
+*      :12,35w <newfile> // escribe un nuevo archivo con el contenido del actual tomando el contenido entre las lineas 12 - 35
+*      :w! <prevfile> // escribe el contenido actual sobre unu archivo ya existente 
